@@ -1,0 +1,27 @@
+<!--div class="sidebar blog">
+    <ul class="main-menu">
+        <%- partial('partials/main_menu') %>
+    </ul>
+    <div class="list">
+        <h2>Recent Posts</h2>
+        <ul>
+        <% site.posts.sort('date', -1).limit(10).each(function (post) { %>
+            <li>
+                <a href="/<%- post.path %>" class="sidebar-link<%- page.title === post.title ? ' current' : '' %>"><%- post.title %></a>
+            </li>
+        <% }) %>
+        <li style="margin:10px 0 3px">
+          <script data-gittip-username="yyx990803"
+            data-gittip-widget="button"
+            src="//gttp.co/v1.js"></script>
+        </li>
+        </ul>
+    </div>
+</div-->
+<div class="content blog">
+    <h1><%- page.title %></h1>
+    <h4><%- page.date.format('MMM D[,] YYYY') %></h4>
+    <%- page.content %>
+</div>
+
+<%- partial('partials/footer') %>

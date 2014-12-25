@@ -1,0 +1,96 @@
+<div id="hero">
+    <div class="inner">
+        <ul id="nav">
+            <li><a href="/guide/" class="nav-link">Guide</a></li>
+            <li><a href="/api/" class="nav-link">API Reference</a></li>
+            <li><a href="/examples/" class="nav-link">Examples</a></li>
+            <li><a href="/blog/" class="nav-link">Blog</a></li>
+        </ul>
+        <img class="logo" src="/images/logo.png">
+        <h1>bearcat</h1>
+        <p class="sub">Magic, self-described javaScript objects build up elastic, maintainable front-backend javaScript applications</p>
+        <!--p class="desc">bearcat enables you to write just plain old javaScript objects with a bit magic and self-described to build applications both for frontend and backend<br>It provides dependency injection with asynchronous loading .</p-->
+        <p class="buttons">
+        <a href="/guide/installation.html" class="button">Get bearcat</a>
+        <a href="https://github.com/bearcatjs/bearcat" target="_blank" class="button">Source on GitHub</a>
+        </p>
+        <ul id="social">
+            <li><iframe src="http://ghbtns.com/github-btn.html?user=bearcatnode&repo=bearcat&type=watch&count=true"
+            allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe></li>
+            <li><iframe src="http://ghbtns.com/github-btn.html?user=bearcatnode&repo=bearcat&type=fork&count=true"
+            allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe></li>
+        </ul>
+    </div>
+</div>
+<div id="example" >
+    <h2>10 Seconds Example</h2>
+    <div class="g-gist f-cb">
+        <div class="gists"><pre><code class="js">var Car = function() {
+    this.$id = "car";
+    this.$engine = null;
+}
+
+Car.prototype.run = function() { 
+    this.$engine.run(); 
+    console.log('run car...');
+}
+
+bearcat.module(Car, typeof module !== 'undefined' ? module : {});
+</code></pre></div>
+ <div class="gists"><pre><code class="js">var Engine = function() {
+    this.$id = "engine";
+}
+
+Engine.prototype.run = function() {
+    console.log('run engine...');
+}
+
+bearcat.module(Engine, typeof module !== 'undefined' ? module : {});
+</code></pre></div></div>
+    <h2>engine will be automatically loaded and injected into car</h2>
+    <h2>car is ready to run just for you to invoke</h2>
+    <img class="logo" src="/images/car.png">
+</div>
+<div id="features">
+    <div class="feats">
+        <div class="feat">
+            <h2><span class="icon simple"></span>Simple</h2>
+            <p>Write simple plain old javaScript objects, that's it.</p>
+        </div>
+        <div class="feat">
+            <h2><span class="icon fast"></span>Efficient</h2>
+            <p>Dependency injection with asynchronous loading(frontend), no need to use define, require, or a bundle file.</p>
+        </div>
+        <div class="feat">
+            <h2><span class="icon composable"></span>Reuseable</h2>
+            <p>Simple javaScript objects can be used for frontend and backend(node.js) without any modifications.</p>
+        </div>
+        <div class="feat">
+            <h2><span class="icon compact"></span>Easy</h2>
+            <p>Easy to use, all javaScript objects will be scaned ready for you, no need to write extra complex, messy configuration files.</p>
+        </div>
+        <div class="feat">
+            <h2><span class="icon powerful"></span>Powerful</h2>
+            <p>Powered by dependency injection, AOP based declarative middleware services.</p>
+        </div>
+        <div class="feat">
+            <h2><span class="icon module"></span>Moduler</h2>
+            <p>You just use only those parts that you need.</p>
+        </div>
+    </div>
+</div>
+<!--div id="why">
+    <h2>You should try it out if you like:</h2>
+    <ul>
+        <li>simple plain old javaScript objects</li>
+        <li>asynchronous frontend dependency management without amd like define, require</li>
+        <li>write less or none configuration files with the self-described javaScript objects</li>
+        <li>API that simply makes sense</li>
+        <li>Build UI by composing components</li>
+        <li>Mix &amp; matching small libraries</li>
+    </ul>
+</div-->
+<div id="footer">
+    <p>Released under the <a href="http://opensource.org/licenses/MIT" target="_blank">MIT License</a></p>
+    <p>Copyright (c) <%- date(Date.now(), 'YYYY') %> <a href="http://bearcatjs.org" target="_blank">bearcat</a></p>
+</div>
