@@ -1,0 +1,3 @@
+[submodule "bearcat-examples"]
+	path = bearcat-examples
+	url = https://github.com/bearcatjs/bearcat-examples.git
