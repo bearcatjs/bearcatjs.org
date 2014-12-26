@@ -14,5 +14,7 @@ git clone https://github.com/bearcatjs/bearcatjs.org.git --recursive
 ```
 $ npm install -g hexo
 $ npm install
+$ hexo generate
+$ cp -rf bearcat-examples public/examples 
 $ hexo server
 ```
