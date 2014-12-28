@@ -232,3 +232,4 @@ May you enjoy coding with bearcat ...
 * [journey-from-requirejs-to-browserify](http://esa-matti.suuronen.org/blog/2013/03/22/journey-from-requirejs-to-browserify/)
 * [angularjs-vs-knockout-modules-and-di-6](http://blogs.lessthandot.com/index.php/webdev/uidevelopment/angularjs-vs-knockout-modules-and-di-6/)
 * [angularjs dependency injection](https://docs.angularjs.org/guide/di)
+* [requirejs-angularjs-dependency-injection](http://solutionoptimist.com/2013/09/30/requirejs-angularjs-dependency-injection/)
