@@ -518,3 +518,28 @@ context.json
 }
 ```
 you can refer to [context_namespace example](https://github.com/bearcatjs/bearcat/tree/master/examples/context_namespace) for more details
+
+## Note
+you can write $ based syntax sugars as you like, so the following is also ok  
+
+``` js
+var Car = function() {
+    this.$id = "car";
+    this["$engine"] = null; // use []
+    var wheelName = "$wheel";
+    this[wheelName] = null; // use variable
+};
+  
+Car.prototype["$light"] = null; // use variable in prototype
+  
+Car.prototype.run = function() {
+    this.$engine.run();
+    this.$light.shine();
+    this.$wheel.run();
+    console.log('car run...');
+}
+  
+module.exports = Car;
+```
+
+a full example can be found on [complex_function_annotation](https://github.com/bearcatjs/bearcat/tree/master/examples/complex_function_annotation)
