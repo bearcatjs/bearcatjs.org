@@ -23,3 +23,5 @@ load it as you like by script tag or browerify require or amd define
 ``` html
 <script src="bearcat-bootstrap.js"></script>
 ```
+
+***note***：only when you add a file or delete a file or modify the file location，`bearcat-bootstrap.js` need to be regenerated, when you just edit files，it is not needed to be regenerated
