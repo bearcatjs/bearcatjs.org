@@ -31,6 +31,8 @@ now `bundle.js` contains all the javascript that `hello.js` needs to work. To us
 
 as you see, browserify bundles all modular codes in a build process, then it uses the final bundle file, not your original source codes. So when `bundle.js` file loaded in the browser, all your modular codes are loaded and mapped so that node-style CommonJS `require` can be worked in the browser. The build process that is always needed, is a problem that not only browserify faces, other browser CommonJS module system(like component, duo, webpack) also faces. 
 
+<!-- more -->
+
 ## browserify problems
 All problems browserify faces come from the annoying `build process`, it is not exist in nodejs environment, however when in browser environment it is a must to make CommonJS work.  
 Then developers have to edit the code, build the bundle, set up a debugger, find the source, edit the code, then build the bundle again...
