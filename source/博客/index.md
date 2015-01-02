@@ -263,7 +263,7 @@ bearcat + browserify 会是一个不错的组合
 
 一个例子，基于 bearcat + browserify 的 markdwon-editor  
 
-bearcat 与 browserify 直接通过一个`requireUtil`（比如）的module来进行连接
+bearcat 与 browserify 之间通过一个`requireUtil`（比如）的module来进行连接
 
 在这个 `requireUtil` 可以使用 browserify 的 require，用这个 require 来引入第三方库，比如marked库  
 
@@ -306,7 +306,7 @@ MarkDownController.prototype.initBrace = function(md) {
 bearcat.module(MarkDownController, typeof module !== 'undefined' ? module : {});
 ```	
 
-这样子一来，编写业务层代码由于是由bearcat管理的，javaScript依赖异步加载，代码编写和debug就和AMD一样，所见即所得，设置断点什么的，再也不用担心找不到源文件（或者需要source map）  
+这样子一来，编写业务层代码由于是bearcat管理的，javaScript依赖异步加载，代码编写和debug就和AMD一样，所见即所得，设置断点什么的，再也不用担心找不到源文件（或者需要source map）  
 使用 browserify 仅仅是为了用它来引入第三方库，且也仅仅当引入一个新的第三方库的时候才会执行一下 browserify 的 build  
 
 bearcat 和 browserify 的优势就都发挥了出来，提高了开发的效率以及可维护性  
@@ -315,7 +315,7 @@ bearcat-markdown-editor 官网例子地址 [markdown-editor](http://bearcatjs.or
 
 ### 总结
 无论是CommonJS、AMD或者是dependency injection，单独使用某一个，javaScript依赖管理都不是完美的  
-面对不同的场景，使用不同的方案  
+应人而异，各取所需  
 
 ### 参考
 * [martin fowlter dependency injection](http://martinfowler.com/articles/injection.html)
