@@ -320,3 +320,4 @@ bearcat-markdown-editor 官网例子地址 [markdown-editor](http://bearcatjs.or
 ### 参考
 * [martin fowlter dependency injection](http://martinfowler.com/articles/injection.html)
 * [asynchronous frontend dependency management without AMD](http://bearcatjs.org/2014/12/24/asynchronous-frontend-dependency-management-without-AMD/)
+* [browserify with asynchronous script loading​](http://bearcatjs.org/2015/01/02/browserify-with-asynchronous-script-loading/)
