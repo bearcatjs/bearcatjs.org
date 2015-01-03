@@ -115,6 +115,8 @@ webpack takes modules with dependencies and generates static assets representing
 
 webpack 是一个 module bundler 即模块打包工具，它支持 CommonJS，AMD的module形式，同时还支持 code splittling，css 等  
 
+最近 browserify 和 webpack 也有一定的比较，可以看看 substack 的文章 [browserify for webpack users](https://gist.github.com/substack/68f8d502be42d5cd4942)
+
 #### 小结
 这些 browser 上的 CommonJS 解决方案都有一个共同的问题，就是无法避免的需要一个 build 过程，这个过程虽然可以通过 watch task 来进行自动化，但是还是edit和debug还是非常不方便的  
 
@@ -123,7 +125,7 @@ webpack 是一个 module bundler 即模块打包工具，它支持 CommonJS，AM
 同时，需要build的过程也给多页面应用开发带来了很多麻烦，每个页面都要配置 watch task，都要配置 source map 之类的，而且build过程如果一旦出现了build error，开发者还要去看看命令行里面的日志，除非使用 [beefy](https://github.com/chrisdickinson/beefy) 这种可以把命令行里面的日志输出到浏览器console，否则不知道情况的开发者就会一脸迷茫     
 
 ### CommonJS vs AMD
-这永远是一个话题，因为谁也无法很好的取代谁，尤其在浏览器环境里面，因为两者都有自己的优点和缺点  
+这永远是一个话题，因为谁也无法很好的取代谁，尤其在浏览器环境里面，两者都有自己的优点和缺点  
 CommonJS 
 * 优点：简洁，更符合一个module system，同时 module 库的管理也非常方便  
 * 缺点：浏览器环境必须build才能使用，给开发过程带来不便
@@ -321,3 +323,4 @@ bearcat-markdown-editor 官网例子地址 [markdown-editor](http://bearcatjs.or
 * [martin fowlter dependency injection](http://martinfowler.com/articles/injection.html)
 * [asynchronous frontend dependency management without AMD](http://bearcatjs.org/2014/12/24/asynchronous-frontend-dependency-management-without-AMD/)
 * [browserify with asynchronous script loading​](http://bearcatjs.org/2015/01/02/browserify-with-asynchronous-script-loading/)
+* [原文](http://bearcatjs.org/%E5%8D%9A%E5%AE%A2/index.html)
