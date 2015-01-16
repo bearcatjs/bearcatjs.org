@@ -3,7 +3,7 @@ type: examples
 order: 1
 ---
 
-<iframe width="100%" height="500" src="bearcat-examples/browserify-markdown-editor/index.html" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="500" src="bearcat-examples/browserify-markdown-editor/index.html" allowfullscreen="allowfullscreen" frameborder="0"></iframe> 
 
 Browserify lets you require('modules') in the browser by bundling up all of your dependencies. Therefore, it is easy to resolve a library using browserify by simply call `require('library')`. However, browserify bundles up all files, debug and edit files may meet up some problems. You should watch files and build up bundle file whenever code files changes, moreover when build errored, the error message should show up in the browser to make developer know what happened. For better debugger, developers should know how to use [source-map](http://thlorenz.com/blog/browserify-sourcemaps).  
 With bearcat, browserify will simply be a role of `library resolver`, developers write magic javaScript objects, and if want to use a library, use browserify to resolve it.  
