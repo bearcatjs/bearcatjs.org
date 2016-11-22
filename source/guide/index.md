@@ -5,22 +5,22 @@ order: 2
 
 ## Introduction
 
-Bearcat is a front-backend javaScript framework that enables developers to write magic, self-described javaScript objects, to build up elastic, maintainable front-backend javaScript applications. It provides an infrastructural backbone to manage business objects so that developers can focus on application-level business logic.  
+Bearcat is a front-backend javaScript framework that enables developers to write magical, self-describing javaScript objects, to build up elastic, maintainable front-backend Javascript applications. It provides the backbone infrastructure to manage business objects so that developers can focus on application-level business logic.  
 
-Bearcat is focused on writing small javaScripts, but building big world. The world is connected through bearcat's powerful dependency injection and Aspect Oriented Programming(AOP).  
+Bearcat is focused on writing small Javascripts files, which together make a big world. The world is connected through bearcat's powerful dependency injection and Aspect Oriented Programming(AOP).  
 
-Besides there are little or no configurations to let it work. Magically, the configuration metas are described by javaScript objects themselves.  
+Little or no configuration is required to make it work. The configuration meta-data is described by javaScript objects themselves.  
 
-Moreover, unlike other front-backend dependency management, bearcat does not use 'define', 'require', 'exports' to resolve dependencies, all are nature javaScript objects. Therefore, codes are highly sharable between frontend(browser) and backend(nodejs) without any modifications or have to build up a bundle to make it work.  
+Unlike other front-backend dependency management, bearcat does not use 'define', 'require', 'exports' to resolve dependencies. Everything is made up of pure Javascript objects. As a result, code is easy to re-use  between frontend (browser) and backend (nodejs) without any modifications or having to build up a bundle to make it work.  
 
-One more thing, frontend dependency management with bearcat is asynchronously loaded, which AMD fascinates you a lot, so every page can use different script files and development will be a lot of fun, what you see is what you get, there is no need to build up a bundle and find out the source file when something goes wrong.  
+Frontend dependency management with bearcat is asynchronously loaded: every page can use different script files. Development is easier: what you see is what you get, there is no need to build up a bundle and find out the source file when something goes wrong.  
 
-So keep reading and have a try, you will enjoy coding with bearcat.  
+So keep reading and give it a try.
 
 ## Concepts Overview
 
 ### Magic JavaScript Objects
-JavaScript Object can be magic, it not only has properties and methods, but also can describe themselves through some DSL or syntax sugar. In bearcat, the syntax sugar is '$' character, which you are quite familiar with. So magic javaScript Object can be like this.  
+JavaScript Object can be magic, it not only has properties and methods, but also can describe themselves through some DSL or syntax sugar. In bearcat, the syntax sugar is '$' character. So magic javaScript Object can be like this.  
 
 ```js
 var MagicJsObject = function() {
@@ -32,17 +32,17 @@ MagicJsObject.prototype.doMethod = function() {
 }
 ```
 
-yeah, it is a simple function Object, but has a property and the property is prefixed with '$'  
+It is a simple function Object, but has a property and the property is prefixed with '$'  
 
 ```js
 this.$id = "magicJsObject";
 ```
 
-this codes describe itself with an id named 'magicJsObject', with this id bearcat knows this `guy`, when someone else ask the dependency for this `guy`, bearcat will automatically wire it up for you.  
+This program describes itself with an id named 'magicJsObject', with this id bearcat knows this `guy`, when someone else ask the dependency for this `guy`, bearcat will automatically wire it up for you.  
 
 ### Dependency Injection
 
-Inversion of Control (IoC) is a design pattern that addresses a component's dependency resolution, configuration and lifecycle. IoC is best understood through the Hollywood Principle: "Dont's call us, we'll call you". Bearcat implements IoC with dependency injection (DI). That is components do not look up, they provide plain simple configuration metadata enabling the container to resolve dependencies. The container is wholly responsible for wiring up components, passing resolved objects into JavaScript Object properties or constructors.  
+Inversion of Control (IoC) is a design pattern that addresses a component's dependency resolution, configuration and lifecycle. IoC is best understood through the Hollywood Principle: "Don't call us, we'll call you". Bearcat implements IoC with dependency injection (DI). That is, components do not look up, they provide plain simple configuration metadata enabling the container to resolve dependencies. The container is wholly responsible for wiring up components, passing resolved objects into JavaScript Object properties or constructors.  
 
 ### Aspect Object Programming
 Aspect-Oriented Programming (AOP) complements Object-Oriented Programming (OOP) by providing another way of thinking about program structure. The key unit of modularity in OOP is the class, whereas in AOP the unit of modularity is the aspect. Aspects enable the modularization of concerns such as transaction management that cut across multiple types and objects. (Such concerns are often termed crosscutting concerns in AOP literature.) 
